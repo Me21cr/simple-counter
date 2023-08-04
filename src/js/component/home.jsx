@@ -4,21 +4,19 @@ import React from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className='container contador'>
+                 <div className='row contador xl '>
+                 <div className='col rounded text-white text-center display-5 border-start border-end digito'><i class="fa-solid fa-clock" style="color: #ffffff;"></i></div>
+				 <div className='col rounded text-white text-center display-5 border-start border-end digito'> {props.digitosix}</div>
+				 <div className='col rounded text-white text-center display-5 border-start border-end digito'>{props.digitofive}</div>
+				 <div className='col rounded text-white text-center display-5 border-start border-end digito'> {props.digitofour}</div>
+				 <div className='col rounded text-white text-center display-5 border-start border-end digito'>{props.digitothree}</div>
+				 <div className='col rounded text-white text-center display-5 border-start border-end digito'> {props.digitotwo}</div>
+				 <div className='col rounded text-white text-center display-5 border-start border-end digito'> {props.digitoone}</div>
+			
+		</div>
 		</div>
 	);
 };
